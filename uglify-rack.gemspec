@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "uglify-rack"
-  s.version = "0.1.1"
+  s.version = "0.1.0"
   s.summary = "Rack-based middleware to uglifier (ie: minimize) Javascript as it's served"
   s.description = "uglify-rack is a tiny Rack middleware that passes javascript through the Node's uglify utility before they're served."
 

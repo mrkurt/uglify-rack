@@ -1,5 +1,5 @@
 require "test/unit"
-require "uglify_rack"
+require "uglify-rack"
 
 class UglifyRack::TestCase < Test::Unit::TestCase
   undef_method :default_test if method_defined? :default_test

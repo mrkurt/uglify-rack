@@ -36,9 +36,7 @@ module UglifyRack
       body.close if body.respond_to?(:close)
 
       begin
-        output = Uglifier.new.compile(js.join)
-        headers['Uglify'] = 'No-Alibi'
-        [output]
+        [Uglifier.new.compile(js.join)]
       rescue Uglifier::Error
         js #already called close, need new array
       end

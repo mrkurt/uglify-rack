@@ -36,6 +36,10 @@ class TestMiddleware < UglifyRack::TestCase
     assert_equal 'var func=function(){var a="asdf"}()', last_response.body
   end
 
+  test "minify over and over" do
+    (0..10).each {|i| get "/test.min.js" }
+  end
+
   test "gracefully fail on non-js" do
     get "/bad-test.min.js"
 
